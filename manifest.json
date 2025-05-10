@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Google Defunifier",
+  "version": "1.0",
+  "description": "Removes embedded game windows and other distractions from Google Search.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://www.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Google Defunifer"
+  }
+}

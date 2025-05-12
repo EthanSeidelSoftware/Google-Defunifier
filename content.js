@@ -20,6 +20,7 @@
       message.appendChild(text);
 
       // Replace the game with the message
+      // There are still a few bug that me, nor ChatGPT can figure out.
       gameWindow.replaceWith(message);
       console.log('Google game replaced with policy message and Learn More link.');
     }
